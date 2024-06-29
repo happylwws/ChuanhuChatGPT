@@ -2,8 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "Dockerfile",
-      "use": "@vercel/docker"
+      "src": "ChuanhuChatbot.py",
+      "use": "@vercel/python",
+      "config": { "runtime": "python3.10" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "ChuanhuChatbot.py"
     }
   ]
 }
