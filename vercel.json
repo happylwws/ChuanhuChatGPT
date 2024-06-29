@@ -4,7 +4,10 @@
     {
       "src": "ChuanhuChatbot.py",
       "use": "@vercel/python",
-      "config": { "runtime": "python3.10" }
+      "config": { 
+        "runtime": "python3.10" ,
+        "postinstall": "apt-get update && apt-get install -y swig" 
+      }
     }
   ],
   "routes": [
